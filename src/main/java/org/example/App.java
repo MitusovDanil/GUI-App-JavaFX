@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -28,6 +29,10 @@ public class App extends Application {
         scene = new Scene(loadFXML("test"));
         stage.setScene(scene);
         stage.show();
+        Alert a = new Alert(Alert.AlertType.NONE);
+        a.setAlertType(Alert.AlertType.INFORMATION);
+        a.setContentText("Выбрать департамент");
+        a.show();
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

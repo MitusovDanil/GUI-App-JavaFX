@@ -169,12 +169,12 @@ public class MainController {
    * */
 
     public void setTimeSheet() {
-        int index = 0;
+       // int index = 0;
         tableWorkers.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             int workId = tableWorkers.getSelectionModel().getSelectedItem().getId();
-            numbersOfDays.setItems(loadDayNumber(index));
             months.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent1 -> {
                 int a = months.getSelectionModel().getSelectedIndex();
+                numbersOfDays.setItems(loadDayNumber(a));
                 valueOfMarks.setItems(loadMarks(workId, a));
             });
         });
